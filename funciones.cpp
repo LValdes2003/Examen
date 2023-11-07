@@ -2,10 +2,11 @@
 // Autor: Leonardo Valdes
 // Fecha: 26/09/2019
 
-int triplesPitagoricos(int triple[])
+int triplesPitagoricos(int triple[], int aValor)
 {
+    aValor = 1;
     int a, b, c;
-    for (a = 1; a <= 20; a++)
+    for (a = aValor; a <= 20; a++)
         for (b = 1; b <= 20; b++)
             for (c = 1; c <= 20; c++)
                 if (a * a + b * b == c * c)
