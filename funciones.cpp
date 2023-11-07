@@ -2,19 +2,16 @@
 // Autor: Leonardo Valdes
 // Fecha: 26/09/2019
 
-int triplesPitagoricos(int triple[], int aValor)
-{
-    aValor = 1;
-    int a, b, c;
-    for (a = aValor; a <= 20; a++)
-        for (b = 1; b <= 20; b++)
-            for (c = 1; c <= 20; c++)
-                if (a * a + b * b == c * c)
-                {
-                    triple[0] = a;
-                    triple[1] = b;
-                    triple[2] = c;
-                    return 1;
+#include <iostream>
+
+void triplesPitagoricos(int n) {
+    for (int a = 1; a <= n; a++) {
+        for (int b = a; b <= n; b++) {
+            for (int c = b; c <= n; c++) {
+                if (a * a + b * b == c * c) {
+                    std::cout << a << " " << b << " " << c << "\n" << std::endl;
                 }
-    return 0;
+            }
+        }
+    }
 }
